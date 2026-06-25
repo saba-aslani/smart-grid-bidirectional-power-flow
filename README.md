@@ -34,6 +34,19 @@ Real OPSD Data  →  Probabilistic Forecast  →  Monte Carlo Power Flow
 
 ---
 
+## Selected Figures
+
+### Integrated EMS Dashboard
+![Dashboard](assets/full_dashboard.png)
+
+### Bidirectional Flow Risk Map
+![Reverse Flow](assets/reverse_flow_probability.png)
+
+### RL Training & Control Impact
+![RL](assets/rl_training.png)
+
+---
+
 ## Architecture
 
 ```
