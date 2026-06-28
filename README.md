@@ -1,4 +1,4 @@
-# Smart Grid Bidirectional Power Flow
+# Smart Grid EMS - RL Control & Safe Operation Under Partial Observability
 ### Probabilistic Analysis · ML Forecasting · RL Control · Economic Dispatch
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://python.org)
@@ -31,6 +31,12 @@ Real OPSD Data  →  Probabilistic Forecast  →  Monte Carlo Power Flow
 | **RL control** | Overvoltage rate: **13.1% → 1.7%** with only 3.1% renewable curtailment |
 | **Solar forecasting** | GBM: **85.1% skill** improvement over naive persistence (real OPSD data) |
 | **Economic dispatch** | LP optimizer: 70%+ RE share, ramp/reserve/storage constraints |
+
+---
+
+## Current Research Extension
+
+This project revealed a key limitation: the RL agent appeared robust to load variation but was blind to it — load was absent from the state space. This motivated ongoing research into silent failure detection under partial observability: when does an RL agent appear safe while being fundamentally brittle?
 
 ---
 
