@@ -34,6 +34,26 @@ Real OPSD Data  →  Probabilistic Forecast  →  Monte Carlo Power Flow
 
 ---
 
+## Robustness Analysis
+
+The RL agent was tested under different load conditions 
+to evaluate behavior under partial observability:
+
+| Load Factor | No Control | RL Policy |
+|-------------|------------|-----------|
+| x0.5 (low)  | 13.5%      | 1.9%      |
+| x1.0 (normal)| 13.5%     | 1.9%      |
+| x1.5 (high) | 13.5%      | 1.9%      |
+| x2.0 (very high)| 13.5%  | 1.9%      |
+
+**Finding:** The agent maintains consistent performance across load 
+levels because load is absent from the state space — the agent is 
+*blind* to load variation. This is a known limitation of partial 
+observability in RL, and motivates ongoing research into 
+failure-aware safe RL under partial observability.
+
+---
+
 ## Current Research Extension
 
 This project revealed a key limitation: the RL agent appeared robust to load variation but was blind to it — load was absent from the state space. This motivated ongoing research into silent failure detection under partial observability: when does an RL agent appear safe while being fundamentally brittle?
