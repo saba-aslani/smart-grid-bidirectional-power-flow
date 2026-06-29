@@ -112,6 +112,10 @@ AI control.
 ### RL Training & Control Impact
 ![RL](assets/rl_training.png)
 
+### Silent Failure Under Partial Observability
+![Shift](assets/silent_failure_shift.png)
+![FO vs PO](assets/partial_obs_fo_vs_po.png)
+
 ---
 
 ## Architecture
