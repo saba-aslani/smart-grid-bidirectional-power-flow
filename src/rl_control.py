@@ -101,7 +101,9 @@ def train_q_learning(n_episodes=20000, alpha=0.2, gamma=0.0, eps_start=1.0,
 def evaluate_policy(Q, env, n_eval=3000, seed=123):
     rng_eval = np.random.default_rng(seed)
     env_eval = CurtailmentEnv(wind_rated_kw=env.wind_rated, pv_rated_kw=env.pv_rated, seed=seed)
-
+    env_eval.P_load = env.P_load.copy()   
+    env_eval.Q_load = env.Q_load.copy()
+    
     results_rl = {"over": 0, "under": 0, "curtailed_energy_kwh": 0.0, "total_energy_kwh": 0.0, "reward": 0.0}
     results_base = {"over": 0, "under": 0, "curtailed_energy_kwh": 0.0, "total_energy_kwh": 0.0, "reward": 0.0}
 
